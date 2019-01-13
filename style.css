@@ -1,0 +1,28 @@
+.container {
+    padding-top: 10px;
+}
+
+#task-form .btn {
+    background-color: #bf360c;
+}
+
+.card-title, #task-title {
+    color: #e64a19;
+    font-size: 30px !important;
+    font-weight: bold !important;
+}
+
+.clear-tasks {
+    background-color: #d84315;
+}
+
+h1 {
+    text-align: center;
+    color: #e64a19;
+    display: inline-block;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #d84315;
+}
+
