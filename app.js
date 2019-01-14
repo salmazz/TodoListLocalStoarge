@@ -22,7 +22,7 @@ function loadEventListeners() {
     filter.addEventListener('keyup', filterTasks);
 }
 
-// Get Tasks from LS 5
+// Get Tasks from LS
 function getTasks() {
     let tasks;
     if (localStorage.getItem('tasks') === null) {
@@ -69,7 +69,7 @@ function addTask(e) {
     // Add class
     link.className = 'delete-item secondary-content';
     // Add icon html
-    link.innerHTML = '<i class="fas fa-trash"></i>';
+    link.innerHTML = '<i class="fa fa-remove"></i>';
     // Append the link to li
     li.appendChild(link);
 
@@ -85,7 +85,7 @@ function addTask(e) {
     e.preventDefault();
 }
 
-// Store Task step 1
+// Store Task
 function storeTaskInLocalStorage(task) {
     let tasks;
     if (localStorage.getItem('tasks') === null) {
@@ -105,16 +105,13 @@ function removeTask(e) {
         if (confirm('Are You Sure?')) {
             e.target.parentElement.parentElement.remove();
 
-
-        
-
-            // Remove from LS step2
+            // Remove from LS
             removeTaskFromLocalStorage(e.target.parentElement.parentElement);
         }
     }
 }
 
-// Remove from LS //step 3
+// Remove from LS
 function removeTaskFromLocalStorage(taskItem) {
     let tasks;
     if (localStorage.getItem('tasks') === null) {
@@ -143,11 +140,11 @@ function clearTasks() {
 
     // https://jsperf.com/innerhtml-vs-removechild
 
-    // Clear from LS 
+    // Clear from LS
     clearTasksFromLocalStorage();
 }
 
-// Clear Tasks from LS 4
+// Clear Tasks from LS
 function clearTasksFromLocalStorage() {
     localStorage.clear();
 }
